@@ -21,31 +21,61 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <param name="e"></param>
         private void create_Click(object sender, EventArgs e)
         {
-            create_err.Text = "";
-            string person_name = name.Text;
-            string person_surname = surname.Text;
-            string person_gender = "";
-            if (man.Checked) person_gender = "мужской";
-            if (woman.Checked) person_gender = "женский";
-            int person_year_of_birth = 0;
-            string person_city = city.Text;
-            string person_country = country.Text;
-            double person_height = 0;
-            if (person_name == "") people.Add(new Person());
-            else
+            try
             {
-                if (person_surname == "") people.Add(new Person(person_name));
+                create_err.Text = "";
+                string person_name = name.Text;
+                string person_surname = surname.Text;
+                string person_gender = "";
+                if (man.Checked) person_gender = "мужской";
+                if (woman.Checked) person_gender = "женский";
+                int person_year_of_birth = 0;
+                string person_city = city.Text;
+                string person_country = country.Text;
+                double person_height = 0;
+
+                if (person_name == "") people.Add(new Person());
                 else
                 {
-                    if (int.TryParse(year_of_birth.Text, out person_year_of_birth) &&
-                        double.TryParse(height.Text, out person_height))
-                        people.Add(new Person(person_name, person_surname,
-                        person_gender, person_year_of_birth, person_city, person_country,
-                        Convert.ToDouble(person_height)));
-                    else create_err.Text = "Некорректное значение";
-                    if (person_gender == "" || person_city == "" || person_country == ""
-                        || person_height == 0) create_err.Text = "Введите дополнительные данные";
+                    if (person_surname == "" && Person.IsRightName(person_name))
+                        people.Add(new Person(person_name));
+                    else
+                    {
+                        if (person_city == "" || !Person.IsRightName(person_city)
+                            || person_country == "" || !Person.IsRightName(person_country)
+                            || height.Text == "")
+                        {
+                            create_err.Text = "Заполните все поля формы корректно";
+                            return;
+                        }
+                        if (int.TryParse(year_of_birth.Text, out person_year_of_birth) &&
+                            Person.IsRightYear(person_year_of_birth) &&
+                            double.TryParse(height.Text, out person_height) &&
+                            Person.IsRightHeight(Convert.ToDouble(person_height)))
+                        {
+                            people.Add(new Person(person_name, person_surname,
+                            person_gender, person_year_of_birth, person_city, person_country,
+                            Convert.ToDouble(person_height)));
+                        }
+                        else
+                        {
+                            create_err.Text = "Некорректные данные";
+                            return;
+                        }
+                    }
                 }
+                create_err.Text = "Готово!";
+
+                name.Text = "";
+                surname.Text = "";
+                year_of_birth.Text = "2000";
+                city.Text = "";
+                country.Text = "";
+                height.Text = "";
+            }
+            catch (MyOverflowException ex)
+            {
+                Win32.MessageBox(0, ex.Message + "\n" + ex.TimeOfExeption.ToString(), "Перенаселение", 0);
             }
         }
 
@@ -132,7 +162,7 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             int num = Convert.ToInt32(num_for_change.Value);
             if (people.Count < num)
             {
-                only_name.Text = "Такого человека не существует";
+                change_err.Text = "Такого человека не существует";
                 return;
             }
             string selected = change_pole.SelectedItem.ToString();
@@ -140,10 +170,24 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             switch (selected)
             {
                 case "Имя":
-                    people[num - 1].name = new_value_text;
+                    if (Person.IsRightName(new_value_text))
+                    {
+                        people[num - 1].name = new_value_text;
+                    }
+                    else
+                    {
+                        change_err.Text = "Некорректное значение";
+                    }
                     break;
                 case "Фамилия":
-                    people[num - 1].surname = new_value_text;
+                    if (Person.IsRightName(new_value_text))
+                    {
+                        people[num - 1].surname = new_value_text;
+                    }
+                    else
+                    {
+                        change_err.Text = "Некорректное значение";
+                    }
                     break;
                 case "Пол":
                     if (new_value_text == "мужской" || new_value_text == "женский")
@@ -152,23 +196,38 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                     break;
                 case "Год рождения":
                     int new_year = 0;
-                    if (int.TryParse(new_value_text, out new_year))
+                    if (int.TryParse(new_value_text, out new_year) && Person.IsRightYear(new_year))
                         people[num - 1].setYear_of_birth(new_year);
                     else change_err.Text = "Некорректное значение";
                     break;
                 case "Город":
-                    people[num - 1].setCity(new_value.Text);
+                    if (Person.IsRightName(new_value_text))
+                    {
+                        people[num - 1].setCity(new_value.Text);
+                    }
+                    else
+                    {
+                        change_err.Text = "Некорректное значение";
+                    }
                     break;
                 case "Страна":
-                    people[num - 1].setCountry(new_value.Text);
+                    if (Person.IsRightName(new_value_text))
+                    {
+                        people[num - 1].setCountry(new_value.Text);
+                    }
+                    else
+                    {
+                        change_err.Text = "Некорректное значение";
+                    }
                     break;
                 case "Рост":
                     double new_height = 0;
-                    if (double.TryParse(new_value_text, out new_height))
+                    if (double.TryParse(new_value_text, out new_height) && Person.IsRightHeight(new_height))
                         people[num - 1].setHeight(new_height);
                     else change_err.Text = "Некорректное значение";
                     break;
             }
+            change_err.Text = "Готово!";
         }
 
         /// <summary>

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "T6mtK+mSAbs=",
+  "success": false,
+  "projectFilePath": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.Test\\Lb1 Boyarinova Bychkova 23VP1.Test.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Проект Lb1 Boyarinova Bychkova 23VP1 несовместим с net8.0 (.NETCoreApp,Version=v8.0). Проект Lb1 Boyarinova Bychkova 23VP1 поддерживает: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "Lb1 Boyarinova Bychkova 23VP1",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

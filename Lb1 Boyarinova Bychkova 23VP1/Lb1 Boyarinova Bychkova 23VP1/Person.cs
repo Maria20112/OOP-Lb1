@@ -1,66 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace Lb1_Boyarinova_Bychkova_23VP1
 {
     /// <summary>
     /// Класс, описывающий предметную область Человек
     /// </summary>
-    internal class Person
+    public class Person
     {
+        private const double MIN_HEIGHT = 45.0d;
+        private const double MAX_HEIGHT = 250.0d;
+        private const int MAX_AGE = 125;
         /// <summary>
         /// Поле "Имя человека"
         /// </summary>
-        public string name;
+        public string name = "Иван";
         /// <summary>
         /// Поле "Фамилия человека"
         /// </summary>
-        public string surname;
+        public string surname = "Иванов";
         /// <summary>
         /// Поле "Пол человека"
         /// </summary>
-        private string gender;
+        private string gender = "мужской";
         /// <summary>
         /// Поле "Год рождения человека"
         /// </summary>
-        private int year_of_birth;
+        private int year_of_birth = 2000;
         /// <summary>
         /// Поле "Город проживания человека"
         /// </summary>
-        private string city;
+        private string city = "Москва";
         /// <summary>
         /// Поле "Страна проживания человека"
         /// </summary>
-        private string country;
+        private string country = "Россия";
         /// <summary>
         /// Поле "Рост человека"
         /// </summary>
-        private double height;
+        private double height = 180.5d;
         /// <summary>
         /// Общее количество созданных объектов класса Person
         /// </summary>
-        private static int persons_count = 0;
+        private static byte persons_count = 0;
 
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
         public Person()
         {
-            name = "Иван";
-            surname = "Иванов";
-            gender = "мужской";
-            year_of_birth = 2000;
-            city = "Москва";
-            country = "Россия";
-            height = 180.5f;
-            persons_count++;
+            try
+            {
+                checked
+                {
+                    persons_count++;
+                }
+            }
+            catch (OverflowException ex)
+            {
+                throw new MyOverflowException("Создано слишком много людей", ex)
+                {
+                    TimeOfExeption = DateTime.Now
+                };
+            }
         }
 
         /// <summary>
-        /// Кончтруктор с 2 параметрами
+        /// Конструктор с 2 параметрами
         /// </summary>
         /// <param name="_name">Имя</param>
         /// <param name="_surname">Фамилия</param>
@@ -68,28 +73,43 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         {
             name = _name;
             surname = _surname;
-            gender = "мужской";
-            year_of_birth = 2000;
-            city = "Москва";
-            country = "Россия";
-            height = 180.5f;
-            persons_count++;
+            try
+            {
+                checked
+                {
+                    persons_count++;
+                }
+            }
+            catch (OverflowException ex)
+            {
+                throw new MyOverflowException("Создано слишком много людей", ex)
+                {
+                    TimeOfExeption = DateTime.Now
+                };
+            }
         }
 
         /// <summary>
-        /// Кончтруктор с 1 параметром
+        /// Конструктор с 1 параметром
         /// </summary>
         /// <param name="_name">Имя</param>
         public Person(string _name)
         {
             name = _name;
-            surname = "Иванов";
-            gender = "мужской";
-            year_of_birth = 2000;
-            city = "Москва";
-            country = "Россия";
-            height = 180.5f;
-            persons_count++;
+            try
+            {
+                checked
+                {
+                    persons_count++;
+                }
+            }
+            catch (OverflowException ex)
+            {
+                throw new MyOverflowException("Создано слишком много людей", ex)
+                {
+                    TimeOfExeption = DateTime.Now
+                };
+            }
         }
 
         /// <summary>
@@ -112,7 +132,20 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             city = _city;
             country = _country;
             height = _height;
-            persons_count++;
+            try
+            {
+                checked
+                {
+                    persons_count++;
+                }
+            }
+            catch (OverflowException ex)
+            {
+                throw new MyOverflowException("Создано слишком много людей", ex)
+                {
+                    TimeOfExeption = DateTime.Now
+                };
+            }
         }
 
         /// <summary>
@@ -180,6 +213,38 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             return "Имя: " + name + "\nФамилия: " + surname + "\nПол: " + gender + "\nГод рождения: " +
                 year_of_birth.ToString() + "\nГород: " + city + "\nСтрана: " + country +
                 "\nРост: " + height.ToString() + "\nОбщее количество человек: " + persons_count.ToString();
+        }
+
+        /// <summary>
+        /// Проверят правильность высоты роста человека
+        /// </summary>
+        /// <param name="_height">Рост</param>
+        /// <returns>True, если проверка пройдена, иначе - false</returns>
+        static public bool IsRightHeight(double _height)
+        {
+            return (_height > MIN_HEIGHT && _height < MAX_HEIGHT);
+        }
+
+        /// <summary>
+        /// Проверяет правильность года рождения человека
+        /// </summary>
+        /// <param name="_year_of_birth">Год рождения</param>
+        /// <returns>True, если проверка пройдена, иначе - false</returns>
+        static public bool IsRightYear(int _year_of_birth)
+        {
+            int currentYear = DateTime.Now.Year;
+            return (_year_of_birth > currentYear - MAX_AGE && _year_of_birth < currentYear);
+        }
+
+        /// <summary>
+        /// Проверяет правильность какого-либо названия
+        /// </summary>
+        /// <param name="str">Название</param>
+        /// <returns>True, если проверка пройдена, иначе - false</returns>
+        static public bool IsRightName(string str)
+        {
+            string regex = @"^[A-Za-zА-Яа-яЁё-]+$";
+            return Regex.IsMatch(str, regex);
         }
     }
 }

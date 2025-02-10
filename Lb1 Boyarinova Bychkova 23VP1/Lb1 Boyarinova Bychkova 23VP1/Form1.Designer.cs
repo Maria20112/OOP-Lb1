@@ -200,9 +200,9 @@
             label11.AutoSize = true;
             label11.Location = new Point(12, 409);
             label11.Name = "label11";
-            label11.Size = new Size(39, 20);
+            label11.Size = new Size(64, 20);
             label11.TabIndex = 13;
-            label11.Text = "Рост";
+            label11.Text = "Рост, см";
             // 
             // create
             // 
@@ -231,6 +231,7 @@
             // man
             // 
             man.AutoSize = true;
+            man.Checked = true;
             man.Location = new Point(91, 204);
             man.Name = "man";
             man.Size = new Size(91, 24);
@@ -246,19 +247,17 @@
             woman.Name = "woman";
             woman.Size = new Size(90, 24);
             woman.TabIndex = 18;
-            woman.TabStop = true;
             woman.Text = "женский";
             woman.UseVisualStyleBackColor = true;
             // 
             // year_of_birth
             // 
             year_of_birth.Location = new Point(126, 276);
-            year_of_birth.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
-            year_of_birth.Minimum = new decimal(new int[] { 1900, 0, 0, 0 });
+            year_of_birth.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
             year_of_birth.Name = "year_of_birth";
             year_of_birth.Size = new Size(150, 27);
             year_of_birth.TabIndex = 19;
-            year_of_birth.Value = new decimal(new int[] { 1900, 0, 0, 0 });
+            year_of_birth.Value = new decimal(new int[] { 2000, 0, 0, 0 });
             // 
             // city
             // 
@@ -444,7 +443,7 @@
             // create_err
             // 
             create_err.AutoSize = true;
-            create_err.Location = new Point(33, 515);
+            create_err.Location = new Point(6, 515);
             create_err.Name = "create_err";
             create_err.Size = new Size(0, 20);
             create_err.TabIndex = 41;
