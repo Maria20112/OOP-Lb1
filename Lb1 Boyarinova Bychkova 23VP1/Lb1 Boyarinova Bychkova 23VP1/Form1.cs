@@ -26,45 +26,74 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                 create_err.Text = "";
                 string person_name = name.Text;
                 string person_surname = surname.Text;
-                string person_gender = "";
-                if (man.Checked) person_gender = "мужской";
-                if (woman.Checked) person_gender = "женский";
-                int person_year_of_birth = 0;
+                string person_gender = (man.Checked) ? "мужской" : "женский";
+                //if (man.Checked) person_gender = "мужской";
+                //if (woman.Checked) person_gender = "женский";
+                string person_year_of_birth = year_of_birth.Text;
                 string person_city = city.Text;
                 string person_country = country.Text;
-                double person_height = 0;
+                string person_height = height.Text;
+                Person newPerson;
 
-                if (person_name == "") people.Add(new Person());
+                if (person_name == "")
+                {
+                    newPerson = Person.createPerson();
+                }
+                else if (person_surname == "")
+                {
+                    newPerson = Person.createPerson(person_name);
+                }
+                else if (person_city == "" || person_country == "" || height.Text == "")
+                {
+                    newPerson = Person.createPerson(person_name, person_surname);
+                }
                 else
                 {
-                    if (person_surname == "" && Person.IsRightName(person_name))
-                        people.Add(new Person(person_name));
-                    else
-                    {
-                        if (person_city == "" || !Person.IsRightName(person_city)
-                            || person_country == "" || !Person.IsRightName(person_country)
-                            || height.Text == "")
-                        {
-                            create_err.Text = "Заполните все поля формы корректно";
-                            return;
-                        }
-                        if (int.TryParse(year_of_birth.Text, out person_year_of_birth) &&
-                            Person.IsRightYear(person_year_of_birth) &&
-                            double.TryParse(height.Text, out person_height) &&
-                            Person.IsRightHeight(Convert.ToDouble(person_height)))
-                        {
-                            people.Add(new Person(person_name, person_surname,
-                            person_gender, person_year_of_birth, person_city, person_country,
-                            Convert.ToDouble(person_height)));
-                        }
-                        else
-                        {
-                            create_err.Text = "Некорректные данные";
-                            return;
-                        }
-                    }
+                    newPerson = Person.createPerson(person_name, person_surname,
+                            person_gender, person_year_of_birth, person_city,
+                            person_country, person_height);
                 }
-                create_err.Text = "Готово!";
+
+                if (newPerson == null)
+                {
+                    create_err.Text = "Заполните все поля формы корректно";
+                }
+                else
+                {
+                    people.Add(newPerson);
+                    create_err.Text = "Готово!";
+                }
+                //if (person_name == "") people.Add(new Person());
+                //else
+                //{
+                //    if (person_surname == "" && Person.IsRightName(person_name))
+                //        people.Add(new Person(person_name));
+                //    else
+                //    {
+                //        if (person_city == "" || !Person.IsRightName(person_city)
+                //            || person_country == "" || !Person.IsRightName(person_country)
+                //            || height.Text == "")
+                //        {
+                //            create_err.Text = "Заполните все поля формы корректно";
+                //            return;
+                //        }
+                //        if (int.TryParse(year_of_birth.Text, out person_year_of_birth) &&
+                //            Person.IsRightYear(person_year_of_birth) &&
+                //            double.TryParse(height.Text, out person_height) &&
+                //            Person.IsRightHeight(Convert.ToDouble(person_height)))
+                //        {
+                //            people.Add(new Person(person_name, person_surname,
+                //            person_gender, person_year_of_birth, person_city, person_country,
+                //            Convert.ToDouble(person_height)));
+                //        }
+                //        else
+                //        {
+                //            create_err.Text = "Некорректные данные";
+                //            return;
+                //        }
+                //    }
+                //}
+                //create_err.Text = "Готово!";
 
                 name.Text = "";
                 surname.Text = "";
@@ -195,9 +224,11 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                     else change_err.Text = "Некорректное значение";
                     break;
                 case "Год рождения":
-                    int new_year = 0;
-                    if (int.TryParse(new_value_text, out new_year) && Person.IsRightYear(new_year))
-                        people[num - 1].setYear_of_birth(new_year);
+                    //int new_year = 0;
+                    if (Person.IsRightYear(new_value_text))
+                    {
+                        people[num - 1].setYear_of_birth(Convert.ToInt32(new_value_text));
+                    }
                     else change_err.Text = "Некорректное значение";
                     break;
                 case "Город":
@@ -221,13 +252,20 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                     }
                     break;
                 case "Рост":
-                    double new_height = 0;
-                    if (double.TryParse(new_value_text, out new_height) && Person.IsRightHeight(new_height))
-                        people[num - 1].setHeight(new_height);
+                    //double new_height = 0;
+                    if (Person.IsRightHeight(new_value_text))
+                    {
+                        people[num - 1].setHeight(Convert.ToDouble(new_value_text));
+                    }
                     else change_err.Text = "Некорректное значение";
                     break;
+                default: break;
             }
-            change_err.Text = "Готово!";
+            if (change_err.Text == "")
+            {
+                change_err.Text = "Готово!";
+            }
+
         }
 
         /// <summary>

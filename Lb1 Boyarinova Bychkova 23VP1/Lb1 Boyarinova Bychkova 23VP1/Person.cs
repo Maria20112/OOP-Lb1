@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 namespace Lb1_Boyarinova_Bychkova_23VP1
 {
@@ -147,6 +148,40 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                 };
             }
         }
+        public static Person createPerson()
+        {
+            return new Person();
+        }
+
+        public static Person createPerson(string inputName)
+        {
+            if (IsRightName(inputName))
+            {
+                return new Person(inputName);
+            }
+            return null; //Или исключение???
+        }
+
+        public static Person createPerson(string inputName, string inputSurname)
+        {
+            if (IsRightName(inputName) && IsRightName(inputSurname))
+            {
+                return new Person(inputName, inputSurname);
+            }
+            return null;
+        }
+
+        public static Person createPerson(string _name, string _surname, string _gender, string _year_of_birth, 
+            string _city, string _country, string _height)
+        {
+            if(!IsRightName(_name) || !IsRightName(_surname)|| !IsRightYear(_year_of_birth) ||
+                !IsRightName(_city) ||!IsRightName(_country) || !IsRightHeight(_height))
+            {
+                return null;
+            }
+            return new Person(_name, _surname, _gender, Convert.ToInt32(_year_of_birth), _city,
+            _country, Convert.ToDouble(_height));
+        }
 
         /// <summary>
         /// Функция для получения значения поля "Пол"
@@ -215,25 +250,51 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                 "\nРост: " + height.ToString() + "\nОбщее количество человек: " + persons_count.ToString();
         }
 
-        /// <summary>
-        /// Проверят правильность высоты роста человека
-        /// </summary>
-        /// <param name="_height">Рост</param>
-        /// <returns>True, если проверка пройдена, иначе - false</returns>
-        static public bool IsRightHeight(double _height)
-        {
-            return (_height > MIN_HEIGHT && _height < MAX_HEIGHT);
-        }
+        ///// <summary>
+        ///// Проверят правильность высоты роста человека
+        ///// </summary>
+        ///// <param name="_height">Рост</param>
+        ///// <returns>True, если проверка пройдена, иначе - false</returns>
+        //static public bool IsRightHeight(double _height)
+        //{
+        //    return (_height > MIN_HEIGHT && _height < MAX_HEIGHT);
+        //}
 
         /// <summary>
-        /// Проверяет правильность года рождения человека
+        /// Проверят правильность строки с возможным ростом человека
         /// </summary>
-        /// <param name="_year_of_birth">Год рождения</param>
+        /// <param name="_height">Строка с возможным ростом</param>
         /// <returns>True, если проверка пройдена, иначе - false</returns>
-        static public bool IsRightYear(int _year_of_birth)
+        static public bool IsRightHeight(string _height)
         {
+            string regex = @"^[0-9]+(,[0-9]+)*$";
+            return (Regex.IsMatch(_height, regex)&& Convert.ToDouble(_height) > MIN_HEIGHT 
+                && Convert.ToDouble(_height) < MAX_HEIGHT);
+        }
+
+        ///// <summary>
+        ///// Проверяет правильность года рождения человека
+        ///// </summary>
+        ///// <param name="_year_of_birth">Год рождения</param>
+        ///// <returns>True, если проверка пройдена, иначе - false</returns>
+        //static public bool IsRightYear(int _year_of_birth)
+        //{
+        //    int currentYear = DateTime.Now.Year;
+        //    return (_year_of_birth > currentYear - MAX_AGE && _year_of_birth < currentYear);
+        //}
+
+        /// <summary>
+        /// Проверяет правильность строки с возможным годом рождения человека
+        /// </summary>
+        /// <param name="_year_of_birth">Строка с возможным годом рождения</param>
+        /// <returns>True, если проверка пройдена, иначе - false</returns>
+        static public bool IsRightYear(string _year_of_birth)
+        {
+            string regex = @"^[0-9]+$";
             int currentYear = DateTime.Now.Year;
-            return (_year_of_birth > currentYear - MAX_AGE && _year_of_birth < currentYear);
+            return (Regex.IsMatch(_year_of_birth, regex) &&
+                Convert.ToInt32(_year_of_birth) > currentYear - MAX_AGE
+                && Convert.ToInt32(_year_of_birth) < currentYear);
         }
 
         /// <summary>

@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1E29052-C5E5-409D-B7E1-F138699C4B29}|Lb1 Boyarinova Bychkova 23VP1.Test\\Lb1 Boyarinova Bychkova 23VP1.Test.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1.test\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1E29052-C5E5-409D-B7E1-F138699C4B29}|Lb1 Boyarinova Bychkova 23VP1.Test\\Lb1 Boyarinova Bychkova 23VP1.Test.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1.test\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\myoverflowexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\myoverflowexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\myoverflowexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\myoverflowexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|c:\\nadezhda\\study\\labs\\oop_cs\\lb1 boyarinova bychkova 23vp1\\lb1 boyarinova bychkova 23vp1\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F741C677-DCCD-45C6-9DCA-7FB088BC324A}|Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.csproj|solutionrelative:lb1 boyarinova bychkova 23vp1\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MSTestSettings.cs",
-              "DocumentMoniker": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.Test\\MSTestSettings.cs",
-              "RelativeDocumentMoniker": "Lb1 Boyarinova Bychkova 23VP1.Test\\MSTestSettings.cs",
-              "ToolTip": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1.Test\\MSTestSettings.cs",
-              "RelativeToolTip": "Lb1 Boyarinova Bychkova 23VP1.Test\\MSTestSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T20:10:03.738Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -63,51 +46,49 @@
               "RelativeToolTip": "Lb1 Boyarinova Bychkova 23VP1\\Win32.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T17:34:59.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T17:34:59.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MyOverflowException.cs",
               "DocumentMoniker": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\MyOverflowException.cs",
               "RelativeDocumentMoniker": "Lb1 Boyarinova Bychkova 23VP1\\MyOverflowException.cs",
               "ToolTip": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\MyOverflowException.cs",
               "RelativeToolTip": "Lb1 Boyarinova Bychkova 23VP1\\MyOverflowException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T12:01:51.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T12:01:51.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\Person.cs",
               "RelativeDocumentMoniker": "Lb1 Boyarinova Bychkova 23VP1\\Person.cs",
               "ToolTip": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\Person.cs",
               "RelativeToolTip": "Lb1 Boyarinova Bychkova 23VP1\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAswCQBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T15:21:55.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",
               "RelativeDocumentMoniker": "Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",
               "ToolTip": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",
               "RelativeToolTip": "Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwD8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T15:18:02.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Nadezhda\\Study\\Labs\\OOP_CS\\Lb1 Boyarinova Bychkova 23VP1\\Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",
               "RelativeDocumentMoniker": "Lb1 Boyarinova Bychkova 23VP1\\Form1.cs",

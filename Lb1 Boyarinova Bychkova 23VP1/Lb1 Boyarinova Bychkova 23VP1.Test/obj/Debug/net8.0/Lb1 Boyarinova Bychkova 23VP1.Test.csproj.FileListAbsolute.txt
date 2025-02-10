@@ -1,0 +1,10 @@
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.csproj.AssemblyReference.cache
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.AssemblyInfoInputs.cache
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.AssemblyInfo.cs
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.csproj.CoreCompileInputs.cache
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.gentestingplatformentrypointinputcache.cache
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.genautoregisteredextensionsinputcache.cache
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\AutoRegisteredExtensions.cs
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\TestPlatformEntryPoint.cs
+C:\Nadezhda\Study\Labs\OOP_CS\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.Test\obj\Debug\net8.0\Lb1 Boyarinova Bychkova 23VP1.Test.sourcelink.json

@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lb1 Boyarinova Bychkova 23VP1", "Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1.csproj", "{F741C677-DCCD-45C6-9DCA-7FB088BC324A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lb1 Boyarinova Bychkova 23VP1.Test", "Lb1 Boyarinova Bychkova 23VP1.Test\Lb1 Boyarinova Bychkova 23VP1.Test.csproj", "{D1E29052-C5E5-409D-B7E1-F138699C4B29}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{F741C677-DCCD-45C6-9DCA-7FB088BC324A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F741C677-DCCD-45C6-9DCA-7FB088BC324A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F741C677-DCCD-45C6-9DCA-7FB088BC324A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1E29052-C5E5-409D-B7E1-F138699C4B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1E29052-C5E5-409D-B7E1-F138699C4B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1E29052-C5E5-409D-B7E1-F138699C4B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1E29052-C5E5-409D-B7E1-F138699C4B29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
