@@ -49,14 +49,14 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             //[DataRow("Алек,сей", "Петров", "мужской", 1990, "Санкт-Петербург",
               //      "Россия", 175.38)]
             [DataRow("Алексей", "Петров", "мужской", 1990, "Санкт-Петербург",
-                    "Россия", 175.38)]
+                    "Россия", 175.0)]
             //[DataRow(0, 0, 0)]
             public void ParameterizedConstructor_CreationWithInvalidParameters(string name, string surname,
                 string gender, int year, string city, string country, double hight)
             {
                 // Arrange & Act
                 var person = new Person("Алексей", "Петров", "мужской", 1990, "Санкт-Петербург",
-                    "Россия", 175.38);
+                    "Россия", 175.0);
 
                 // Assert
                 Assert.AreEqual("Алексей", person.name);

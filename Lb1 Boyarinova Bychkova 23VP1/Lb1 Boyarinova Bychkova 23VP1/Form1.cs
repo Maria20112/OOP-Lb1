@@ -3,7 +3,7 @@
     public partial class Form1 : Form
     {
         /// <summary>
-        /// Ñïèñîê, õðàíÿùèé âñå ñîçäàííûå îáúåêòû Person
+        /// Список, хранящий все созданные объекты Person
         /// </summary>
         List<Person> people = new List<Person>();
         public Form1()
@@ -15,7 +15,8 @@
         }
 
         /// <summary>
-        /// Ôóíêöèÿ, ïîëó÷àþùàÿ ââåäåííûå ïîëüçîâàòåëåì äàííûå è ñîçäàþùàÿ íîâûé îáúåêò Person
+        /// Функция, получающая введенные пользователем данные и создающая новый 
+        /// объект Person
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -26,9 +27,7 @@
                 create_err.Text = "";
                 string person_name = name.Text;
                 string person_surname = surname.Text;
-                string person_gender = (man.Checked) ? "ìóæñêîé" : "æåíñêèé";
-                //if (man.Checked) person_gender = "ìóæñêîé";
-                //if (woman.Checked) person_gender = "æåíñêèé";
+                string person_gender = (man.Checked) ? "мужской" : "женский";
                 string person_year_of_birth = year_of_birth.Text;
                 string person_city = city.Text;
                 string person_country = country.Text;
@@ -56,45 +55,13 @@
 
                 if (newPerson == null)
                 {
-                    create_err.Text = "Çàïîëíèòå âñå ïîëÿ ôîðìû êîððåêòíî";
+                    create_err.Text = "Заполните все поля формы корректно";
                 }
                 else
                 {
                     people.Add(newPerson);
-                    create_err.Text = "Ãîòîâî!";
+                    create_err.Text = "Готово!";
                 }
-                //if (person_name == "") people.Add(new Person());
-                //else
-                //{
-                //    if (person_surname == "" && Person.IsRightName(person_name))
-                //        people.Add(new Person(person_name));
-                //    else
-                //    {
-                //        if (person_city == "" || !Person.IsRightName(person_city)
-                //            || person_country == "" || !Person.IsRightName(person_country)
-                //            || height.Text == "")
-                //        {
-                //            create_err.Text = "Çàïîëíèòå âñå ïîëÿ ôîðìû êîððåêòíî";
-                //            return;
-                //        }
-                //        if (int.TryParse(year_of_birth.Text, out person_year_of_birth) &&
-                //            Person.IsRightYear(person_year_of_birth) &&
-                //            double.TryParse(height.Text, out person_height) &&
-                //            Person.IsRightHeight(Convert.ToDouble(person_height)))
-                //        {
-                //            people.Add(new Person(person_name, person_surname,
-                //            person_gender, person_year_of_birth, person_city, person_country,
-                //            Convert.ToDouble(person_height)));
-                //        }
-                //        else
-                //        {
-                //            create_err.Text = "Íåêîððåêòíûå äàííûå";
-                //            return;
-                //        }
-                //    }
-                //}
-                //create_err.Text = "Ãîòîâî!";
-
                 name.Text = "";
                 surname.Text = "";
                 year_of_birth.Text = "2000";
@@ -104,24 +71,24 @@
             }
             catch (MyOverflowException ex)
             {
-                Win32.MessageBox(0, ex.Message + "\n" + ex.TimeOfExeption.ToString(), "Ïåðåíàñåëåíèå", 0);
+                Win32.MessageBox(0, ex.Message + "\n" + ex.TimeOfExeption.ToString(), "Перенаселение", 0);
             }
         }
 
         /// <summary>
-        /// Ôóíêöèÿ, âûâîäÿùàÿ ïîëíóþ èíôîðìàöèþ î âûáðàííîì ÷åëîâåêå
+        /// Функция, выводящая полную информацию о выбранном человеке
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void print_all_Click(object sender, EventArgs e)
         {
             int num = Convert.ToInt32(number.Value);
-            if (people.Count < num) data.Text = "Òàêîãî ÷åëîâåêà íå ñóùåñòâóåò";
+            if (people.Count < num) data.Text = "Некорректное значение";
             else data.Text = people[num - 1].ToString();
         }
 
         /// <summary>
-        /// Ôóíêöèÿ, âûâîäÿùàÿ íà ýêðàí çíà÷åíèå îïðåäåëííîãî ïîëÿ ó âûáðàííîãî ÷åëîâåêà
+        /// Функция, выводящая на экран значение определнного поля у выбранного человека
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -130,38 +97,38 @@
             int num = Convert.ToInt32(number.Value);
             if (people.Count < num)
             {
-                only_name.Text = "Òàêîãî ÷åëîâåêà íå ñóùåñòâóåò";
+                only_name.Text = "Такого человека не существует";
                 return;
             }
             string selected = pole.SelectedItem.ToString();
             switch (selected)
             {
-                case "Èìÿ":
+                case "Имя":
                     only_name.Text = people[num - 1].name;
                     break;
-                case "Ôàìèëèÿ":
+                case "Фамилия":
                     only_name.Text = people[num - 1].surname;
                     break;
-                case "Ïîë":
-                    only_name.Text = people[num - 1].getGender();
+                case "Пол":
+                    only_name.Text = people[num - 1].Gender;
                     break;
-                case "Ãîä ðîæäåíèÿ":
-                    only_name.Text = people[num - 1].getYear_of_birth().ToString();
+                case "Год рождения":
+                    only_name.Text = people[num - 1].Year_of_birth.ToString();
                     break;
-                case "Ãîðîä":
-                    only_name.Text = people[num - 1].getCity();
+                case "Город":
+                    only_name.Text = people[num - 1].City;
                     break;
-                case "Ñòðàíà":
-                    only_name.Text = people[num - 1].getCountry();
+                case "Страна":
+                    only_name.Text = people[num - 1].Country;
                     break;
-                case "Ðîñò":
-                    only_name.Text = people[num - 1].getHeight().ToString();
+                case "Рост":
+                    only_name.Text = people[num - 1].Height.ToString();
                     break;
             }
         }
 
         /// <summary>
-        /// Ôóíêöèÿ äëÿ ïðåäñòàâëåíèÿ çíà÷åíèé ÷èñëîâûõ ïîëåé â 16-ì ôîðìàòå
+        ///Функция для представления значений числовых полей в 16-м формате
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -170,18 +137,18 @@
             int num = Convert.ToInt32(number.Value);
             if (people.Count < num)
             {
-                only_name.Text = "Òàêîãî ÷åëîâåêà íå ñóùåñòâóåò";
+                only_name.Text = "Такого человека не существует";
                 return;
             }
             string selected = hex_pole.SelectedItem.ToString();
-            if (selected == "Ãîä ðîæäåíèÿ") print_num.Text =
-                    Convert.ToString(Convert.ToInt32(people[num - 1].getYear_of_birth()), 16);
-            if (selected == "Ðîñò") print_num.Text =
-                    Convert.ToString(Convert.ToInt32(people[num - 1].getHeight()), 16);
+            if (selected == "Год рождения") print_num.Text =
+                    Convert.ToString(Convert.ToInt32(people[num - 1].Year_of_birth), 16);
+            if (selected == "Рост") print_num.Text =
+                    Convert.ToString(Convert.ToInt32(people[num - 1].Height), 16);
         }
 
         /// <summary>
-        /// Ôóíêöèÿ, ìåíÿþùàÿ çíà÷åíèå âûáðàííîãî ïîëÿ ó îïðåäåëåííîãî ÷åëîâåêà
+        /// Функция, меняющая значение выбранного поля у определенного человека
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -191,85 +158,85 @@
             int num = Convert.ToInt32(num_for_change.Value);
             if (people.Count < num)
             {
-                change_err.Text = "Òàêîãî ÷åëîâåêà íå ñóùåñòâóåò";
+                change_err.Text = "Такого человека не существует";
                 return;
             }
             string selected = change_pole.SelectedItem.ToString();
             string new_value_text = new_value.Text;
             switch (selected)
             {
-                case "Èìÿ":
+                case "Имя":
                     if (Person.IsRightName(new_value_text))
                     {
                         people[num - 1].name = new_value_text;
                     }
                     else
                     {
-                        change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                        change_err.Text = "Некорректное значение";
                     }
                     break;
-                case "Ôàìèëèÿ":
+                case "Фамилия":
                     if (Person.IsRightName(new_value_text))
                     {
                         people[num - 1].surname = new_value_text;
                     }
                     else
                     {
-                        change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                        change_err.Text = "Некорректное значение";
                     }
                     break;
-                case "Ïîë":
-                    if (new_value_text == "ìóæñêîé" || new_value_text == "æåíñêèé")
-                        people[num - 1].setGender(new_value.Text);
-                    else change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                case "Пол":
+                    if (new_value_text == "мужской" || new_value_text == "женский")
+                        people[num - 1].Gender = new_value.Text;
+                    else change_err.Text = "Некорректное значение";
                     break;
-                case "Ãîä ðîæäåíèÿ":
+                case "Год рождения":
                     //int new_year = 0;
                     if (Person.IsRightYear(new_value_text))
                     {
-                        people[num - 1].setYear_of_birth(Convert.ToInt32(new_value_text));
+                        people[num - 1].Year_of_birth = Convert.ToInt32(new_value_text);
                     }
-                    else change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                    else change_err.Text = "Некорректное значение";
                     break;
-                case "Ãîðîä":
+                case "Город":
                     if (Person.IsRightName(new_value_text))
                     {
-                        people[num - 1].setCity(new_value.Text);
+                        people[num - 1].City = new_value.Text;
                     }
                     else
                     {
-                        change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                        change_err.Text = "Некорректное значение";
                     }
                     break;
-                case "Ñòðàíà":
+                case "Страна":
                     if (Person.IsRightName(new_value_text))
                     {
-                        people[num - 1].setCountry(new_value.Text);
+                        people[num - 1].Country = new_value.Text;
                     }
                     else
                     {
-                        change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                        change_err.Text = "Некорректное значение";
                     }
                     break;
-                case "Ðîñò":
+                case "Рост":
                     //double new_height = 0;
                     if (Person.IsRightHeight(new_value_text))
                     {
-                        people[num - 1].setHeight(Convert.ToDouble(new_value_text));
+                        people[num - 1].Height = Convert.ToDouble(new_value_text);
                     }
-                    else change_err.Text = "Íåêîððåêòíîå çíà÷åíèå";
+                    else change_err.Text = "Некорректное значение";
                     break;
                 default: break;
             }
             if (change_err.Text == "")
             {
-                change_err.Text = "Ãîòîâî!";
+                change_err.Text = "Готово!";
             }
 
         }
 
         /// <summary>
-        /// Çàâåðøàåò ðàáîòó ïðèëîæåíèÿ
+        /// Завершает работу приложения
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
