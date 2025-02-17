@@ -58,7 +58,7 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <summary>
         /// Город
         /// </summary>
-        public string City { get; set; } = "Город";
+        public string City { get; set; } = "Москва";
 
         /// <summary>
         /// Страна
@@ -73,7 +73,7 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <summary>
         /// Общее количество людей
         /// </summary>
-        public static int Persons_count { get; private set; }
+        public static byte Persons_count { get; private set; }
 
         /// <summary>
         /// Конструктор по умолчанию
@@ -103,10 +103,24 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <param name="_surname">Фамилия</param>
         public Person(string _name, string _surname)
         {
-            name = _name;
-            surname = _surname;
             try
             {
+                if (!IsRightName(_name))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода имени")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if (!IsRightName(_surname))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода фамилии")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                name = _name;
+                surname = _surname;
                 checked
                 {
                     Persons_count++;
@@ -127,9 +141,16 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <param name="_name">Имя</param>
         public Person(string _name)
         {
-            name = _name;
             try
             {
+                if (!IsRightName(_name))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода имени")
+                    { 
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                name = _name;
                 checked
                 {
                     Persons_count++;
@@ -154,18 +175,60 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <param name="_city">Город</param>
         /// <param name="_country">Страна</param>
         /// <param name="_height">Рост</param>
-        public Person(string _name, string _surname, string _gender, int _year_of_birth, 
-            string _city, string _country, double _height)
+        public Person(string _name, string _surname, string _gender, string _year_of_birth, 
+            string _city, string _country, string _height)
         {
-            name = _name;
-            surname = _surname;
-            Gender = _gender;
-            Year_of_birth = _year_of_birth;
-            City = _city;
-            Country = _country;
-            Height = _height;
             try
             {
+                if (!IsRightName(_name) )
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода имени")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if (!IsRightName(_surname))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода фамилии")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if (!IsRightYear(_year_of_birth))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода года рождения")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if (!IsRightName(_city))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода города")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if (!IsRightName(_country))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода страны")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                if(!IsRightHeight(_height))
+                {
+                    throw new PersonArgumentExeption("Ошибка ввода роста")
+                    {
+                        TimeOfExeption = DateTime.Now
+                    };
+                }
+                name = _name;
+                surname = _surname;
+                Gender = _gender;
+                Year_of_birth = Int32.Parse(_year_of_birth);
+                City = _city;
+                Country = _country;
+                Height = Double.Parse(_height);
                 checked
                 {
                     Persons_count++;
@@ -179,40 +242,6 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                 };
             }
         }
-        public static Person createPerson()
-        {
-            return new Person();
-        }
-
-        public static Person createPerson(string inputName)
-        {
-            if (IsRightName(inputName))
-            {
-                return new Person(inputName);
-            }
-            return null; //Или исключение???
-        }
-
-        public static Person createPerson(string inputName, string inputSurname)
-        {
-            if (IsRightName(inputName) && IsRightName(inputSurname))
-            {
-                return new Person(inputName, inputSurname);
-            }
-            return null;
-        }
-
-        public static Person createPerson(string _name, string _surname, string _gender, string _year_of_birth,
-            string _city, string _country, string _height)
-        {
-            if (!IsRightName(_name) || !IsRightName(_surname) || !IsRightYear(_year_of_birth) ||
-                !IsRightName(_city) || !IsRightName(_country) || !IsRightHeight(_height))
-            {
-                return null;
-            }
-            return new Person(_name, _surname, _gender, Convert.ToInt32(_year_of_birth), _city,
-            _country, Convert.ToDouble(_height));
-        }
 
         /// <summary>
         /// Переопределенный метод ToString()
@@ -225,16 +254,6 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
                 "\nРост: " + Height.ToString() + "\nОбщее количество человек: " + Persons_count.ToString();
         }
 
-        ///// <summary>
-        ///// Проверят правильность высоты роста человека
-        ///// </summary>
-        ///// <param name="_height">Рост</param>
-        ///// <returns>True, если проверка пройдена, иначе - false</returns>
-        //static public bool IsRightHeight(double _height)
-        //{
-        //    return (_height > MIN_HEIGHT && _height < MAX_HEIGHT);
-        //}
-
         /// <summary>
         /// Проверят правильность строки с возможным ростом человека
         /// </summary>
@@ -242,21 +261,11 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <returns>True, если проверка пройдена, иначе - false</returns>
         static public bool IsRightHeight(string _height)
         {
-            string regex = @"^[0-9]+(,[0-9]+)*$";
+            string regex = @"^[0-9]+(,[0-9]+)?$";
             return (Regex.IsMatch(_height, regex) && Convert.ToDouble(_height) > MIN_HEIGHT
                 && Convert.ToDouble(_height) < MAX_HEIGHT);
         }
 
-        ///// <summary>
-        ///// Проверяет правильность года рождения человека
-        ///// </summary>
-        ///// <param name="_year_of_birth">Год рождения</param>
-        ///// <returns>True, если проверка пройдена, иначе - false</returns>
-        //static public bool IsRightYear(int _year_of_birth)
-        //{
-        //    int currentYear = DateTime.Now.Year;
-        //    return (_year_of_birth > currentYear - MAX_AGE && _year_of_birth < currentYear);
-        //}
 
         /// <summary>
         /// Проверяет правильность строки с возможным годом рождения человека
@@ -268,8 +277,8 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
             string regex = @"^[0-9]+$";
             int currentYear = DateTime.Now.Year;
             return (Regex.IsMatch(_year_of_birth, regex) &&
-                Convert.ToInt32(_year_of_birth) > currentYear - MAX_AGE
-                && Convert.ToInt32(_year_of_birth) < currentYear);
+                Convert.ToInt32(_year_of_birth) >= currentYear - MAX_AGE
+                && Convert.ToInt32(_year_of_birth) <= currentYear);
         }
 
         /// <summary>
@@ -279,7 +288,7 @@ namespace Lb1_Boyarinova_Bychkova_23VP1
         /// <returns>True, если проверка пройдена, иначе - false</returns>
         static public bool IsRightName(string str)
         {
-            string regex = @"^[A-Za-zА-Яа-яЁё-]+$";
+            string regex = @"^[A-Za-zА-Яа-яЁё]+((-|')[A-Za-zА-Яа-яЁё]+)*$";
             return Regex.IsMatch(str, regex);
         }
     }

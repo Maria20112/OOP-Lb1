@@ -15,3 +15,20 @@ D:\Пгу\C#\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1
 D:\Пгу\C#\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.pdb
 D:\Пгу\C#\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.genruntimeconfig.cache
 D:\Пгу\C#\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\ref\Lb1 Boyarinova Bychkova 23VP1.dll
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\bin\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.exe
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\bin\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.deps.json
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\bin\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.runtimeconfig.json
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\bin\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.dll
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\bin\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.pdb
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1_Boyarinova_Bychkova_23VP1.Form1.resources
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.csproj.GenerateResource.cache
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.AssemblyInfoInputs.cache
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.AssemblyInfo.cs
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.csproj.CoreCompileInputs.cache
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.sourcelink.json
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.dll
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\refint\Lb1 Boyarinova Bychkova 23VP1.dll
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.pdb
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\Lb1 Boyarinova Bychkova 23VP1.genruntimeconfig.cache
+C:\Nadezhda\Study\Labs\CS\Lb1\OOP-Lb1\Lb1 Boyarinova Bychkova 23VP1\Lb1 Boyarinova Bychkova 23VP1\obj\Debug\net8.0-windows8.0\ref\Lb1 Boyarinova Bychkova 23VP1.dll

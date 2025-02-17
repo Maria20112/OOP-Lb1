@@ -36,32 +36,26 @@
 
                 if (person_name == "")
                 {
-                    newPerson = Person.createPerson();
+                    newPerson = new Person();
                 }
                 else if (person_surname == "")
                 {
-                    newPerson = Person.createPerson(person_name);
+                    newPerson = new Person(person_name);
                 }
                 else if (person_city == "" || person_country == "" || height.Text == "")
                 {
-                    newPerson = Person.createPerson(person_name, person_surname);
+                    newPerson = new Person(person_name, person_surname);
                 }
                 else
                 {
-                    newPerson = Person.createPerson(person_name, person_surname,
+                    newPerson = new Person(person_name, person_surname,
                             person_gender, person_year_of_birth, person_city,
                             person_country, person_height);
                 }
 
-                if (newPerson == null)
-                {
-                    create_err.Text = "Заполните все поля формы корректно";
-                }
-                else
-                {
-                    people.Add(newPerson);
-                    create_err.Text = "Готово!";
-                }
+                people.Add(newPerson);
+                create_err.Text = "Готово!";
+
                 name.Text = "";
                 surname.Text = "";
                 year_of_birth.Text = "2000";
@@ -72,6 +66,10 @@
             catch (MyOverflowException ex)
             {
                 Win32.MessageBox(0, ex.Message + "\n" + ex.TimeOfExeption.ToString(), "Перенаселение", 0);
+            }
+            catch (PersonArgumentExeption ex)
+            {
+                create_err.Text = ex.Message + "\n" + ex.TimeOfExeption.ToString();
             }
         }
 

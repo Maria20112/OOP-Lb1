@@ -1,10 +1,12 @@
-﻿namespace Lb1_Boyarinova_Bychkova_23VP1
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lb1_Boyarinova_Bychkova_23VP1
 {
-    /// <summary>
-    /// Пользовательское исключение, унаследованное от OverflowException. Дополнено возможностью фиксации 
-    /// даты и времени генерации исключения 
-    /// </summary>
-    public class MyOverflowException : OverflowException
+    public class PersonArgumentExeption : ArgumentException
     {
         ///<summary>
         ///Свойство, обозначающее время и дату создания исключения. 
@@ -16,17 +18,17 @@
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public MyOverflowException() : base() { }
+        public PersonArgumentExeption() : base() { }
         /// <summary>
         /// Конструктор с параметром для создания исключения с сообщением
         /// </summary>
         /// <param name="message">Текст сообщения</param>
-        public MyOverflowException(string message) : base(message) { }
+        public PersonArgumentExeption(string message) : base(message) { }
         /// <summary>
         /// Конструктор с параметрами для создания исключения с сообщением и внутренним исключением
         /// </summary>
         /// <param name="message">Текст сообщения</param>
         /// <param name="innerExeption">Внутреннее исключение</param>
-        public MyOverflowException(string message, Exception innerExeption) : base(message, innerExeption) { }
+        public PersonArgumentExeption(string message, Exception innerExeption) : base(message, innerExeption) { }
     }
 }
